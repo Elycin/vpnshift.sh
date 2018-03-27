@@ -209,8 +209,8 @@ main() {
 	# Set up DNS inside the new namespace
 	printf > "${namespace_dir}/resolv.conf" \
 		"nameserver %s\nnameserver %s\n" \
-		"108.62.19.131" \
-		"104.238.194.235"
+		"8.8.8.8" \
+		"8.8.4.4"
 
 	# drop in a shell to debug namespace connectivity ... the exit trap will catch exit from this and clean up
 	if [[ "$_debug" == 1 ]]; then
